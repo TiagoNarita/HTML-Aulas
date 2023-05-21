@@ -16,6 +16,7 @@ main {
 
 section.container-flex-main{
     height: 100%;
+    width: 100%;
     display: flex;
 }
 .container-img-main{
@@ -102,4 +103,34 @@ section.container-flex-main{
     display: flex;
     justify-content: center;
     margin-top: 15px;
+}
+
+.container-signUp{
+    font-size: 13px;
+    color: #343a40;
+}
+
+.container-signUp a {
+    color:#a2a1a1;
+}
+
+@media (max-width:1600px){
+    .container-form{
+        padding: 80px;
+    }
+}
+
+@media (max-width:800px){
+    section.container-flex-main{
+        flex-direction: column;
+    }
+
+    .container-img-main{
+        width: 100%;
+    }
+
+    .container-form{
+        width: 100%;
+        padding: 110px;
+    }
 }
