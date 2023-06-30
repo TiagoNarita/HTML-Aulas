@@ -1,375 +1,272 @@
-*,
-*::before,
-*::after {
-    --azul-escuro: #154580;
-    --azul-medio: #3970BE;
-    --azul-claro: #E5F1FF;
-    --cinza-texto: #444444;
-    --cinza-claro: #ECECEC;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Roboto, Arial, Helvetica, sans-serif;
-    background-color: var(--azul-claro);
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: auto;
-    font-size: 14px;
-    color: white;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-/* CABEÇALHO */
-
-.cabecalho__container {
-    background-color: white;
-    height: 80px;
-    width: 100%;
-    padding: 0 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-}
-
-.cabecalho__pesquisar__item{
-    display: none;
-}
-
-.rodape__container{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-@media (min-width: 834px){
-    .cabecalho__pesquisar__item{
-        display: block;
-    }
-
-    .rodape__container{
-        justify-content: space-between;
-    }
-}
-
-
-.logo__item {
-    background-image: url(../img/cabecalho/Logo.png);
-    background-repeat: no-repeat;
-    padding: 15px 65px;
-    cursor: pointer;
-}
-
-.pesquisar__input {
-    width: 260px;
-    height: 32px;
-    border: 1px solid rgb(211, 211, 211);
-    font-size: 16px;
-    padding: 3px 8px;
-    border: 1px solid rgb(211, 211, 211);
-}
-
-.pesquisar__label {
-    background-image: url(../img/cabecalho/search.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 1px solid rgb(211, 211, 211);
-    background-color: #F9F9F9;
-    border-left: none;
-    padding: 8px 18px 5px;
-    cursor: pointer;
-}
-
-.cabecalho__audio {
-    background-image: url(../img/cabecalho/mic.png);
-    padding: 20px;
-    display: none;
-}
-
-.cabecalho__videos {
-    background-image: url(../img/cabecalho/video_call.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 20px;
-}
-
-.cabecalho__apps {
-    background-image: url(../img/cabecalho/apps.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 13px 30px 13px 13px;
-}
-
-.cabecalho__notificacoes {
-    background-image: url(../img/cabecalho/notifications.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 13px 30px 13px 13px;
-}
-
-.cabecalho__avatar {
-    background-image: url(../img/cabecalho/Avatar.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 13px 30px 13px 13px;
-}
-
-/* MENU LATERAL */
-
-.menu__container {
-    background-color: var(--azul-escuro);
-    font-size: 14px;
-    position: fixed;
-    bottom: 0%;
-    height: 74px;
-    width: 100%;
-}
-
-.menu__lista{
-    display: flex;
-}
-
-.menu__lista:nth-child(2),
-.menu__lista:nth-child(3),
-.menu__lista:nth-child(4){
-    display: none;
-}
-
-.menu__itens:hover {
-    background-color: var(--azul-medio);
-    transition: .5s;
-}
-
-.icone__inicio::before {
-    content: url(../img/menu/home.png);
-}
-
-.icone__explorar::before {
-    content: url(../img/menu/explore.png);
-}
-
-.icone__shorts::before {
-    content: url(../img/menu/shorts.png);
-}
-
-.icone__inscricoes::before {
-    content: url(../img/menu/subscriptions.png);
-}
-
-.icone__biblioteca::before {
-    content: url(../img/menu/video_library.png);
-}
-
-.icone__historico::before {
-    content: url(../img/menu/history.png);
-}
-
-.icone__relogio::before {
-    content: url(../img/menu/history_toggle_off.png);
-}
-
-.icone__like::before {
-    content: url(../img/menu/thumb_up_alt.png);
-}
-
-.icone__alura::before {
-    content: url(../img/menu/Avatar_Alura.png);
-}
-
-.icone__gaveta::before {
-    content: url(../img/menu/Avatar_Gaveta.png);
-}
-
-.icone__ballerini::before {
-    content: url(../img/menu/Avatar_Rafa.png);
-}
-
-.icone__iamarino::before {
-    content: url(../img/menu/Avatar_Atila.png);
-}
-
-.icone__souto::before {
-    content: url(../img/menu/Avatar_Souto.png);
-}
-
-.icone__nerd::before {
-    content: url(../img/menu/Avatar_Jovem_Nerd.png);
-}
-
-.icone__deschamps::before {
-    content: url(../img/menu/Avatar_Deschamps.png);
-}
-
-.icone__mostrar::before {
-    content: url(../img/menu/keyboard_arrow_down.png);
-}
-
-.icone__videos::before {
-    content: url(../img/menu/videos.png);
-}
-
-.icone__filmes::before {
-    content: url(../img/menu/filmes.png);
-}
-
-.icone__jogos::before {
-    content: url(../img/menu/jogos.png);
-}
-
-/* SECAO SUPERIOR */
-
-.superior__secao__container {
-    height: 63px;
-    color: white;
-    font-size: 16px;
-    background-color: var(--azul-claro);
-    padding: 0 20px;
-    position: fixed;
-    top: 80px;
-    right: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-    overflow: scroll;
-    gap: 15px;
-}
-
-.superior__item {
-    color: var(--cinza-texto);
-    font-size: 16px;
-    background-color: white;
-    border-radius: 20px;
-    padding: 8px 20px;
-    cursor: pointer;
-}
-
-.superior__item:hover {
-    color: white;
-    background-color: var(--azul-escuro);
-    transition: .5s;
-}
-
-/* SEÇÃO VÍDEOS */
-
-.videos__container {
-    color: black;
-    padding: 153px 20px 10px 20px;
-}
-
-.videos__item:hover {
-    transform: scale(1.3);
-    background-color: var(--azul-claro);
-    z-index: 2;
-    transition: .5s;
-}
-
-.descricao-video h3 {
-    font-weight: 700;
-    color: #444444;
-}
-
-.descricao-video p {
-    font-size: 14px;
-    color: #444444;
-}
-
-/* RODAPÉ */
-
-.rodape__container {
-    width: 100%;
-    height: 875px;
-    color: var(--cinza-texto);
-    line-height: 1.5;
-    font-size: 16px;
-    background-color: white;
-}
-
-.rodape__titulo {
-    color: var(--azul-medio);
-    font-weight: bold;
-    padding: 10px 0 20px 0;
-}
-
-@media(min-width: 834px) {
-
-    body {
-        height: 100vh;
-    }
-
-    /* ESTILOS DO MENU LATERAL */
-
-    .menu__container {
-        font-size: 16px;
-    }
-
-    .menu__lista {
-        padding-top: 15px;
-    }
-
-    .menu__lista li {
-        width: 100%;
-    }
-
-    /* ESTILOS DA SECAO SUPERIOR */
-
-    .superior__secao__container {
-        border-top: var(--azul-medio) 1px solid;
-        border-bottom: var(--azul-medio) 1px solid;
-        width: auto;
-        left: 82px;
-    }
-
-    /*ESTILOS SEÇÃO VÍDEOS */
-
-    .videos__container {
-        padding-left: 90px;
-        padding-right: 17px;
-    }
-
-    .videos__item:hover {
-        transform: scale(1.3);
-    }
-
-    /* ESTILOS RODAPÉ */
-
-    .rodape__container {
-        height: 420px;
-        padding-left: 74px;
-    }
-
-}
-
-@media(min-width: 1440px) {
-
-    /* SEÇÃO SUPERIOR */
-
-    .superior__secao__container {
-        left: 247px;
-    }
-
-    /* ESTILOS DO MENU LATERAL */
-
-    .menu__lista {
-        border-bottom: 1.5px solid var(--azul-medio);
-    }
-
-    /* ESTILOS VIDEOS */
-
-    .videos__container {
-        padding-right: 10px;
-        padding-left: 248px;
-    }
-
-    /* ESTILOS RODAPÉ */
-
-    .rodape__container {
-        padding-left: 240px;
-        height: 225px;
-    }
-
-}
+=<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>AluraPlay</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- Cabecalho -->
+    <header>
+
+        <nav class="cabecalho__container">
+
+            <h1 class="logo__item" href="#"></h1>
+
+            <div class="cabecalho__pesquisar__item">
+                <form action="">
+                    <input type="search" placeholder="Pesquisar" id="pesquisar" class="pesquisar__input">
+                    <label for="pesquisar" class="pesquisar__label"></label>
+                </form>
+                <a href="#" class="cabecalho__audio"></a>
+            </div>
+
+            <div class="cabecalho__icones__item">
+                <a href="#" class="cabecalho__videos"></a>
+                <a href="#" class="cabecalho__apps"></a>
+                <a href="#" class="cabecalho__notificacoes"></a>
+                <a href="#" class="cabecalho__avatar"></a>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- Menu lateral -->
+
+    <aside class="menu__container">
+        <ul class="menu__lista">
+            <li>
+                <a class="menu__itens" href="#">
+                    <i class="icone__inicio icone-item"></i>
+                    <span>Início</span></a>
+            </li>
+
+            <li>
+                <a class="menu__itens" href="#">
+                    <i class="icone__explorar icone-item"></i>
+                    <span>Explorar</span></a>
+            </li>
+
+            <li>
+                <a class="menu__itens" href="#">
+                    <i class="icone__shorts icone-item"></i>
+                    <span>Shorts</span></a>
+            </li>
+
+            <li>
+                <a class="menu__itens" href="#">
+                    <i class="icone__inscricoes icone-item"></i>
+                    <span>Inscrições</span></a>
+            </li>
+
+            <li>
+                <a class="menu__itens" href="#">
+                    <i class="icone__biblioteca icone-item"></i>
+                    <span>Biblioteca</span></a>
+            </li>
+        </ul>
+
+        <ul class="menu__lista">
+            <li>
+                <a class="menu__itens" href="#">
+                    <i class="icone__historico icone-item"></i>
+                    <span>Histórico</span></a>
+            </li>
+
+            <li>
+                <a class="menu__itens" href="#">
+                    <i class="icone__relogio icone-item"></i>
+                    <span>Assistir mais tarde</span></a>
+            </li>
+
+            <li>
+                <a class="menu__itens" href="#">
+                    <i class="icone__like icone-item"></i>
+                    <span>Marcados com like</span></a>
+            </li>
+        </ul>
+
+        <ul class="menu__lista">
+            <li>
+                <a class="menu__itens" href="#">
+                    <i class="icone__mostrar icone-item"></i>
+                    <span>Mostrar mais 2</span></a>
+            </li>
+
+            <li>
+                <a class="menu__itens" href="#">
+                    <i class="icone__deschamps icone-item"></i>
+                    <span>Felipe Deschamps</span></a>
+            </li>
+
+            <li>
+                <a class="menu__itens" href="#">
+                    <i class="icone__nerd icone-item"></i>
+                    <span>Jovem Nerd</span></a>
+            </li>
+
+            <li>
+                <a class="menu__itens" href="#">
+                    <i class="icone__souto icone-item"></i>
+                    <span>Mario Souto</span></a>
+            </li>
+
+            <li>
+                <a class="menu__itens" href="#">
+                    <i class="icone__iamarino icone-item"></i>
+                    <span>Atila Iamarino</span></a>
+            </li>
+
+            <li>
+                <a class="menu__itens" href="#">
+                    <i class="icone__ballerini icone-item"></i>
+                    <span>Rafaella Ballerini</span></a>
+            </li>
+
+            <li>
+                <a class="menu__itens" href="#">
+                    <i class="icone__gaveta icone-item"></i>
+                    <span>Gaveta</span></a>
+            </li>
+
+            <li>
+                <a class="menu__itens" href="#">
+                    <i class="icone__alura icone-item"></i>
+                    <span>Alura</span></a>
+            </li>
+
+            <li>
+                <a class="menu__itens inscricoes" href="#">INSCRIÇÕES</a>
+            </li>
+        </ul>
+
+        <ul class="menu__lista">
+            <li class="jogos">
+                <a class="menu__itens" href="#">
+                    <i class="icone__jogos icone-item"></i>
+                    <span>Jogos</span></a>
+            </li>
+
+            <li class="filmes">
+                <a class="menu__itens" href="#">
+                    <i class="icone__filmes icone-item"></i>
+                    <span>Filmes</span></a>
+            </li>
+            <li class="premium">
+                <a class="menu__itens" href="#">
+                    <i class="icone__videos icone-item"></i>
+                    <span>Vídeo Premium</span></a>
+            </li>
+
+            <li class="menu__itens maispagina">
+                <a href="#">MAIS DA PÁGINA</a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Seção superior -->
+
+    <section class="superior__secao__container">
+        <a class="superior__item" href="#">Tudo</a>
+        <a class="superior__item" href="#">Debates</a>
+        <a class="superior__item" href="#">Ao Vivo</a>
+        <a class="superior__item" href="#">Podcasts</a>
+        <a class="superior__item" href="#">Fundos de Investimento</a>
+        <a class="superior__item" href="#">Desenhos</a>
+        <a class="superior__item" href="#">Data Science</a>
+        <a class="superior__item" href="#">Apps</a>
+        <a class="superior__item" href="#">Linguagem de Programação</a>
+        <a class="superior__item" href="#">Ciência da Computação</a>
+        <a class="superior__item" href="#">Marketing</a>
+    </section>
+
+    <!-- Vídeos -->
+
+    <ul class="videos__container">
+    </ul>
+
+    <!-- <Seção rodapé> -->
+    <footer class="rodape__container">
+        <section>
+            <h2 class="rodape__titulo">Programação</h2>
+            <p class="rodape__texto">Lógica</p>
+            <p>Python</p>
+            <p>Computação</p>
+            <p>Jogos</p>
+            <p>Computação</p>
+            <p>Node JS</p>
+        </section>
+
+        <section>
+            <h2 class="rodape__titulo">Data Science</h2>
+            <p class="rodape__texto">Ciência de dados</p>
+            <p>BI</p>
+            <p>SQL</p>
+            <p>Banco de Dados</p>
+            <p>Machine Learning</p>
+            <p>NoSQL</p>
+        </section>
+
+        <section>
+            <h2 class="rodape__titulo">UX e Design</h2>
+            <p class="rodape__texto">Photoshop</p>
+            <p>Illustrator</p>
+            <p>Usabilidade</p>
+            <p>Vídeo e Motion</p>
+            <p>Figma</p>
+            <p>Interface</p>
+        </section>
+
+        <section>
+            <h2 class="rodape__titulo">Inovação e Gestão</h2>
+            <p class="rodape__texto">Métodos ágeis</p>
+            <p>Softskills</p>
+            <p>Liderança</p>
+            <p>Gestão</p>
+            <p>Startups</p>
+            <p>Vendas</p>
+        </section>
+
+        <section>
+            <h2 class="rodape__titulo">Front-end</h2>
+            <p class="rodape__texto">HTML</p>
+            <p>CSS</p>
+            <p>React</p>
+            <p>Angular</p>
+            <p>JavaScript</p>
+            <p>jQuery</p>
+        </section>
+
+        <section>
+            <h2 class="rodape__titulo">Devops</h2>
+            <p class="rodape__texto">AWS</p>
+            <p>Azure</p>
+            <p>Docker</p>
+            <p>Segurança</p>
+            <p>IaC</p>
+            <p>Linux</p>
+        </section>
+
+        <section>
+            <h2 class="rodape__titulo">Mobile</h2>
+            <p class="rodape__texto">React Native</p>
+            <p>Flutter</p>
+            <p>iOS</p>
+            <p>Swift</p>
+            <p>Android</p>
+            <p>Kotlin</p>
+        </section>
+    </footer>
+
+</body>
+
+</html>
