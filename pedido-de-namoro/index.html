@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namora Comigo</title>
+</head>
+
+<body>
+    <div id="conteiner">
+        <h2>Aceita casar comigo delicia?</h2>
+        <button class="btn" onclick="sim()">SIM</button>
+        <BUtton class="btn" onclick="desvia(this)" onmouseover="desvia(this)">NÃO</BUtton>
+    </div>
+</body>
+<style>
+    #conteiner {
+        background: #ff7878;
+        top: 0;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        padding: 10px;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    .btn{
+        background: black;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 80px;
+        border-radius: 5px;
+    }
+</style>
+
+<script>
+    function sim(){
+        alert("não acredito?? vamos se casar então babyy! ");
+        location.href="https://www.youtube.com/watch?v=izGwDsrQ1eQ"
+    }
+    function desvia(t){
+        var btn = t;
+        console.log("Opá, desviei...")
+        btn.style.position = 'absolute'
+        btn.style.top = geraPosicao(10,90);
+        btn.style.left = geraPosicao(10,90);
+    }
+
+    function geraPosicao(min,max){
+        return (Math.random() * (max - min) + min) + "%";
+    }
+</script>
+
+</html>
